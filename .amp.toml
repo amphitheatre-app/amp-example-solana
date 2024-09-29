@@ -1,0 +1,22 @@
+name = "amp-example-solana"
+version = "0.1.0"
+edition = "v1"
+description = "A simple Solana example app"
+readme = "README.md"
+homepage = "https://github.com/amphitheatre-app/amp-example-solana"
+repository = "https://github.com/amphitheatre-app/amp-example-solana"
+license = "Apache-2.0"
+license-file = "LICENSE"
+keywords = ["example", "solana", "getting-started"]
+categories = ["example"]
+
+[build]
+buildpacks = ["ghcr.io/amp-buildpacks/solana"]
+
+[partners]
+solana = { version = "stable", registry = "catalog" }
+
+[build.env]
+BP_ENABLE_DEPLOY_SOLANA_CONTRACT = "true"
+BP_SOLANA_DEPLOY_NETWORK = "devnet"
+BP_WALLET_KEYPAIR = ""
